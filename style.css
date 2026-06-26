@@ -1,0 +1,55 @@
+:root {
+    --bg-main: #000000;
+    --bg-secondary: #050505;
+    --panel: #111111;
+    --border: rgba(255, 255, 255, 0.08);
+    --text-primary: #FFFFFF;
+    --text-secondary: #B5B5B5;
+    --accent-glow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+#main-nav {
+    border-bottom: 1px solid var(--border);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+input {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 1rem 2rem;
+    width: 300px;
+    border-radius: 4px;
+}
