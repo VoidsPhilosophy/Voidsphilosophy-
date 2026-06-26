@@ -1,165 +1,89 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-    <!-- System Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- SEO and Discovery Engine Configuration -->
-    <title>Voids Philosophy | Portal of Cosmic & Ontological Absolute Nothingness</title>
-    <meta name="description" content="An enterprise-grade deep-dive platform exploring existential nothingness, quantum physical vacuums, cosmological voids, and phenomenological philosophy of mind.">
-    <meta name="keywords" content="void philosophy, existential nothingness, quantum vacuum, dark energy, cosmic voids, phenomenology, consciousness absence">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Protocol Configuration -->
-    <meta property="og:title" content="Voids Philosophy Portal">
-    <meta property="og:description" content="Deep academic inquiry into existential voids, quantum vacuums, cosmology, and philosophy of mind.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://voidsphilosophy.org">
-    <meta property="og:image" content="assets/images/og-void-core.jpg">
-    
-    <!-- Enterprise Modular Stylesheets Cascading Layer Stack -->
-    <link rel="stylesheet" href="assets/css/variables.css" type="text/css" media="all">
-    <link rel="stylesheet" href="assets/css/reset.css" type="text/css" media="all">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="assets/css/components.css" type="text/css" media="all">
-    <link rel="stylesheet" href="assets/css/animations.css" type="text/css" media="all">
-    <link rel="stylesheet" href="assets/css/pages.css" type="text/css" media="all">
-    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
-    
-    <!-- Preconnection and Asset Optimization Hooks -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-</head>
-<body id="void-application-root" class="theme-dark core-portal-active ready" data-state="initialized">
+import Link from 'next/link';
+import { Hexagon, ArrowRight, BrainCircuit, Atom, BookOpen, Fingerprint } from 'lucide-react';
 
-    <!-- Global Application Accessibility Bypass Link -->
-    <a href="#primary-editorial-region" class="skip-link-global visually-hidden-focusable" tabindex="1">
-        Skip Directly to Main Ontological Content
-    </a>
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-[#07030e] flex flex-col items-center justify-center p-6 font-sans relative overflow-hidden selection:bg-[#7c3aed] selection:text-white">
+      {/* Ambient Background Glow matching the image's lighting */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#5b21b6] opacity-[0.07] blur-[100px] rounded-full pointer-events-none" />
 
-    <!-- Embedded High-Definition SVG System Sprite Matrix -->
-    <svg xmlns="http://w3.org" style="display: none;" aria-hidden="true">
-        <symbol id="icon-void-singularity" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2, 2"/>
-            <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="0.75"/>
-            <circle cx="50" cy="50" r="5" fill="currentColor"/>
-        </symbol>
-        <symbol id="icon-quantum-fluctuation" viewBox="0 0 100 100">
-            <path d="M10,50 Q25,20 40,50 T70,50 T90,50" fill="none" stroke="currentColor" stroke-width="1"/>
-            <path d="M10,50 Q25,80 40,50 T70,50 T90,50" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="1, 3"/>
-        </symbol>
-        <symbol id="icon-chevron-right" viewBox="0 0 24 24">
-            <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z" fill="currentColor"/>
-        </symbol>
-    </svg>
-
-    <!-- Background Interactive Ambient Node Container -->
-    <div id="ambient-particle-stage" class="particle-system-canvas-wrapper" aria-hidden="true"></div>
-    <div id="mouse-glow-overlay" class="pointer-tracking-illumination-layer" aria-hidden="true"></div>
-
-    <!-- Application Global Navigation Shell -->
-    <header id="application-masthead" class="site-header enterprise-nav-fixed" role="banner">
-        <div class="nav-layout-container wide-width-constraint">
-            
-            <!-- Branding Vector System -->
-            <a href="index.html" class="branding-anchor" id="logo-branding-link" aria-label="Voids Philosophy Home Portal">
-                <span class="branding-logo-wrapper">
-                    <svg class="branding-vector" width="32" height="32" aria-hidden="true">
-                        <use href="#icon-void-singularity"/>
-                    </svg>
-                </span>
-                <span class="branding-text-block">
-                    <span class="brand-title-primary">Voids</span>
-                    <span class="brand-title-secondary">Philosophy</span>
-                </span>
-            </a>
-
-            <!-- Principal Content Navigation Menu -->
-            <nav id="primary-application-navigation" class="navigation-controller" role="navigation" aria-label="Main Platform Navigation Menu">
-                <ul class="navigation-menu-list" role="menubar" id="navigation-menu-interactive-list">
-                    <li class="menu-item-wrapper active-route" role="none">
-                        <a href="index.html" class="menu-item-link current-page-marker" role="menuitem" aria-current="page">
-                            <span class="link-label">Home</span>
-                        </a>
-                    </li>
-                    <li class="menu-item-wrapper" role="none">
-                        <a href="explore.html" class="menu-item-link" role="menuitem">
-                            <span class="link-label">Explore</span>
-                        </a>
-                    </li>
-                    <li class="menu-item-wrapper" role="none">
-                        <a href="science.html" class="menu-item-link" role="menuitem">
-                            <span class="link-label">Science</span>
-                        </a>
-                    </li>
-                    <li class="menu-item-wrapper" role="none">
-                        <a href="philosophy.html" class="menu-item-link" role="menuitem">
-                            <span class="link-label">Philosophy</span>
-                        </a>
-                    </li>
-                    <li class="menu-item-wrapper" role="none">
-                        <a href="essays.html" class="menu-item-link" role="menuitem">
-                            <span class="link-label">Essays</span>
-                        </a>
-                    </li>
-                    <li class="menu-item-wrapper" role="none">
-                        <a href="journal.html" class="menu-item-link" role="menuitem">
-                            <span class="link-label">Journal</span>
-                        </a>
-                    </li>
-                    <li class="menu-item-wrapper" role="none">
-                        <a href="library.html" class="menu-item-link" role="menuitem">
-                            <span class="link-label">Library</span>
-                        </a>
-                    </li>
-                    <li class="menu-item-wrapper" role="none">
-                        <a href="about.html" class="menu-item-link" role="menuitem">
-                            <span class="link-label">About</span>
-                        </a>
-                    </li>
-                    <li class="menu-item-wrapper" role="none">
-                        <a href="contact.html" class="menu-item-link" role="menuitem">
-                            <span class="link-label">Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Search Activation and Theme Configuration Panels -->
-            <div class="header-utility-cluster">
-                <button id="global-search-trigger" class="utility-button search-toggle" aria-haspopup="dialog" aria-controls="global-search-modal" aria-label="Open search engine interface">
-                    <svg class="utility-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                        <circle cx="11" cy="11" r="8"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                    </svg>
-                </button>
-                <button id="global-theme-switcher" class="utility-button theme-toggle" aria-label="Toggle structural luminosity mode">
-                    <svg class="utility-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                </button>
-            </div>
-
-        </div>
-    </header>
-
-    <!-- Main Workspace Container System -->
-    <div class="application-layout-grid wide-width-constraint">
+      <main className="w-full max-w-md flex flex-col items-center relative z-10">
         
-        <!-- Primary Content Editorial Region -->
-        <main id="primary-editorial-region" class="main-content-stream-container" role="main" aria-label="Primary Knowledge Matrix">
-            
-            <!-- Hero Theoretical Exposition Area -->
-            <section id="hero-exposition-block" class="hero-block-wrapper panel-background-blur" aria-labelledby="hero-main-header">
-                <div class="hero-inner-content-alignment">
-                    <header class="hero-text-header-group">
-                        <span class="hero-eyebrow-tag animate-fade-in">Ontological Research Node</span>
-                        <h1 id="hero-main-header" class="hero-display-title animate-text-glow">
-                            The Phenomenon of Absolute Absence
-                        </h1>
-                        <p class="hero-abstract-paragraph">
-                            Welcome to an uncompromised structural study of spatial, intellectual, physical, and cosmic voids. This interface functions as a systematic index tracking nothingness across quantum wave behaviors, philosophical history, dark energy, and human mind expansion.
-                        </p>
-                    </header>
+        {/* Glowing Logo Block */}
+        <div className="w-20 h-20 rounded-3xl bg-[#0d051a] border border-[#3c177a] shadow-[0_0_40px_rgba(124,58,237,0.25)] flex items-center justify-center mb-8 relative group">
+          <div className="absolute inset-0 rounded-3xl bg-[#7c3aed] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
+          <Hexagon className="w-8 h-8 text-[#9d4edd] relative z-10" strokeWidth={1.5} />
+        </div>
+
+        {/* Primary Typography */}
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-[0.15em] text-[#c4a7f8] uppercase mb-4 text-center">
+          Void's Philosophy
+        </h1>
+        <p className="text-[#6d519b] tracking-[0.25em] text-xs uppercase mb-10 text-center font-mono">
+          Exploring Consciousness v2.0
+        </p>
+
+        {/* Segmented Control (Essays / Thinkers) */}
+        <div className="w-full bg-[#0d051a] border border-[#2e1065] rounded-xl p-1.5 flex mb-8">
+          <button className="flex-1 bg-[#2e1065] text-[#d8b4fe] py-2.5 rounded-lg text-sm font-semibold tracking-widest transition-colors shadow-[0_0_15px_rgba(88,28,135,0.4)]">
+            ESSAYS
+          </button>
+          <button className="flex-1 text-[#6d519b] hover:text-[#d8b4fe] py-2.5 rounded-lg text-sm font-semibold tracking-widest transition-colors">
+            THINKERS
+          </button>
+        </div>
+
+        {/* Input Field Area (Search Simulation) */}
+        <div className="w-full mb-8">
+          <label className="block text-[#a78bfa] tracking-[0.15em] text-[10px] uppercase font-bold mb-3 font-mono">
+            Search Archives
+          </label>
+          <input 
+            type="text" 
+            placeholder="Search concepts, physics, theology..." 
+            className="w-full bg-[#0a0314] border border-[#3b1774] rounded-xl px-4 py-4 text-[#e9d5ff] placeholder:text-[#4c2d82] focus:outline-none focus:border-[#7c3aed] focus:shadow-[0_0_20px_rgba(124,58,237,0.2)] transition-all"
+          />
+        </div>
+
+        {/* Primary Glowing Action Button */}
+        <Link 
+          href="/library"
+          className="w-full bg-gradient-to-r from-[#6d28d9] to-[#5b21b6] text-white rounded-xl py-4 flex items-center justify-center gap-2 font-bold tracking-[0.15em] uppercase text-sm shadow-[0_0_30px_rgba(109,40,217,0.4)] hover:shadow-[0_0_40px_rgba(124,58,237,0.6)] hover:brightness-110 transition-all border border-[#8b5cf6]/30 mb-8"
+        >
+          Initialize <ArrowRight className="w-4 h-4" />
+        </Link>
+
+        {/* Divider */}
+        <div className="w-full flex items-center gap-4 mb-8">
+          <div className="h-px bg-[#2e1065] flex-1" />
+          <span className="text-[#4c2d82] tracking-[0.2em] text-[10px] uppercase font-mono">
+            Or Explore Domains
+          </span>
+          <div className="h-px bg-[#2e1065] flex-1" />
+        </div>
+
+        {/* Secondary Grid (Categories) matching the social buttons style */}
+        <div className="grid grid-cols-2 gap-4 w-full">
+          {[
+            { name: 'Neuroscience', icon: BrainCircuit },
+            { name: 'Physics', icon: Atom },
+            { name: 'Philosophy', icon: BookOpen },
+            { name: 'Identity', icon: Fingerprint },
+          ].map((domain) => (
+            <Link
+              key={domain.name}
+              href={`/${domain.name.toLowerCase()}`}
+              className="bg-[#0a0314] border border-[#2e1065] rounded-xl p-3.5 flex items-center gap-3 hover:bg-[#150a29] hover:border-[#4c1d95] transition-colors group"
+            >
+              <domain.icon className="w-5 h-5 text-[#8b5cf6] group-hover:text-[#a882ff] transition-colors" />
+              <span className="text-[#c4b5fd] text-sm font-medium tracking-wide">
+                {domain.name}
+              </span>
+            </Link>
+          ))}
+        </div>
+
+      </main>
+    </div>
+  );
+}
