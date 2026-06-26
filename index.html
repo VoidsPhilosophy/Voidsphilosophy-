@@ -1,35 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-black text-white">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Void's Philosophy | Exploring Consciousness, Reality, and the Unknown</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Void's Philosophy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; cursor: crosshair; }
+        .gradient-glow { background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, rgba(0,0,0,0) 70%); }
+        .nav-link { color: #B5B5B5; transition: all 0.4s ease; }
+        .nav-link:hover { color: #FFFFFF; text-shadow: 0 0 10px rgba(139, 92, 246, 0.5); }
+    </style>
 </head>
-<body>
+<body class="overflow-hidden">
 
-    <nav id="main-nav">
-        <div class="logo">VOID'S PHILOSOPHY</div>
-        <ul>
-            <li><a href="explore.html">Explore</a></li>
-            <li><a href="science.html">Science</a></li>
-            <li><a href="philosophy.html">Philosophy</a></li>
-            <li><a href="library.html">Library</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
+    <!-- Ambient Glow Background -->
+    <div class="fixed inset-0 z-0 gradient-glow"></div>
+    
+    <!-- Canvas for Particle Stars -->
+    <canvas id="voidCanvas" class="fixed inset-0 z-0"></canvas>
 
-    <main class="hero">
-        <div class="container">
-            <h1 class="main-title">VOID'S PHILOSOPHY</h1>
-            <p class="subtitle">"Exploring Consciousness, Reality, and the Unknown."</p>
+    <!-- Main UI Container -->
+    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen p-8">
+        
+        <!-- Navigation -->
+        <nav class="absolute top-12 flex gap-8 text-sm uppercase tracking-[0.2em]">
+            <a href="#" class="nav-link">Explore</a>
+            <a href="#" class="nav-link">Science</a>
+            <a href="#" class="nav-link">Philosophy</a>
+            <a href="#" class="nav-link">Library</a>
+            <a href="#" class="nav-link">About</a>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="text-center">
+            <h1 class="text-[clamp(4rem,15vw,8rem)] font-serif font-light tracking-tighter mb-4">VOID'S PHILOSOPHY</h1>
+            <p class="text-secondary text-xl italic font-light text-[#B5B5B5] mb-12">"Exploring Consciousness, Reality, and the Unknown."</p>
             
-            <div class="search-container">
-                <input type="text" placeholder="Search the void...">
+            <div class="relative group">
+                <input type="text" placeholder="Search the void..." 
+                    class="bg-[#050505] border border-white/10 px-8 py-4 w-full max-w-[500px] text-center focus:outline-none focus:border-violet-500/50 transition-all">
+                <div class="absolute inset-0 border border-violet-500/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Particle Engine
+        const canvas = document.getElementById('voidCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.onresize = resize; resize();
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() { this.x = Math.random()*canvas.width; this.y = Math.random()*canvas.height; this.size = Math.random()*1.5; this.speed = Math.random()*0.2; }
+            update() { this.y -= this.speed; if(this.y < 0) this.reset(); }
+            draw() { ctx.fillStyle = 'rgba(255,255,255,0.3)'; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2); ctx.fill(); }
+        }
+
+        for(let i=0; i<150; i++) particles.push(new Particle());
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
 </body>
 </html>
